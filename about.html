@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" >
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+
+<div class="about">
+    <h1 id="about-title">ABOUT ME<span id="cursor"></span></h1>
+</div>
+
+   <div class="container">
+  <div class="image-with-text">
+  <img src="about.jpg" alt="Image">
+  <div class="text-container">
+
+      <p class="text-uppercase">Hi, my name is Nafiva Jeza. I'm an emerging professional focused on front-end software development & AI at YearUp. Proficient in HTML, CSS, and Python,  I'm expanding my skills with machine learning and JavaScript so I can contribute to AI. My previous experiences, such as working as a producer have provided valuable insights to improve efficiency. </p>
+    
+      <p class="text-uppercase">I'm currently developing an AI-powered chatbot and a collaborative resources website, alongside building a variety of websites and games using Python. Being trilingual, I bring a global reach and versatile skills in internationalization, localization, content creation, and communication, benefiting companies with international clients or teams. </p>
+    
+      <p class="text-uppercase">Since childhood, my favorite part about receiving toys has always been the joy of dismantling them to understand their development and explore ways to enhance and recreate them. I am driven by my passion for growth and constant innovation in the tech industry. </p>
+    
+    <p class="text-uppercase">Feel free to reach out to me, I love networking and building connections!</p>
+
+</div>
+</div>
+</div>
+<!--  This adds linkedin and github icons with links -->
+<div class="social-icons">
+    <a href="https://linkedin.com/in/nafiva-jeza-5ba242167">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/Nafiva">
+      <i class="fab fa-github"></i>
+    </a>
+  </div>
+  <!-- Boorstrap adding a button to get back to the home page, make it changeble to adjust it.  -->
+
+  <button type="button" class="btn btn-primary bg-custom" onclick="window.location.href='index.html'">BACK TO HOME</button>
+
+
+  
+  
+<!--  This js makes sure the linkedin and github icons with fade away as the user scolls down -->
+  <script>
+    window.addEventListener("DOMContentLoaded", function() {
+  var socialIcons = document.querySelector(".social-icons");
+  socialIcons.classList.add("show");
+});
+
+window.addEventListener("scroll", function() {
+  var socialIcons = document.querySelector(".social-icons");
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > 100) {
+    socialIcons.classList.remove("show");
+  } else {
+    socialIcons.classList.add("show");
+  }
+});
+
+
+
+  </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</body>
+</html>

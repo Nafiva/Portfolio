@@ -1,0 +1,160 @@
+/*
+the [*] selects the entire elements of the page, eliminating any margin or padding on the page. 
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif;
+}
+
+.hero{
+    width: 100%;
+    height: 100vh; 
+    position: relative;
+    overflow: hidden;
+}
+/*
+Here I added a video background. 
+
+*/
+#video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+
+}
+/*
+Here I edited main title which is nafiva's portolio. 
+
+*/
+.main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  h1 {
+    font-size: 150px;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(158, 161, 158);
+    font-family: "Source Code Pro", sans-serif, monospace;
+    font-weight: bold;
+    animation: typing 4s linear infinite;
+    transform-origin: center;
+    backface-visibility: visible;
+    opacity: 0.7; /* Adjust the opacity value as needed (0 to 1) */
+    text-shadow: 4px 4px 4px rgb(235, 241, 240); /* Adjust the shadow values as needed */
+    position: relative;
+    display: grid;
+    border-right: 5px solid;
+}   
+
+
+
+
+/* 
+this controls the elements before and after the h1 without toucing h1
+*/
+h1::before,
+h1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;   
+}
+/*
+adding typing animation to my h1 
+*/
+h1::before {
+    background: white;
+    animation: typewriter 4s steps(24) forwards;
+}
+
+@keyframes typewriter {
+    to {
+        left: 100%;
+    }
+}
+/*
+the title container is centering my role title. 
+*/
+.title-container {
+  text-align: center;
+}
+/*
+the h2 is editing size and colors  
+*/
+h2 {
+  font-size: 42px;
+  font-weight: 800;
+  color: rgb(64, 76, 90);
+  font-family:"Source Code Pro", sans-serif, monospace;
+  text-transform: uppercase;
+  
+   
+}
+
+
+
+
+
+  
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 190px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+  }
+  .container { display: inline-block; }
+
+
+/*
+The navbar class positions the navbars to be horinzontal and upper right corner.
+*/
+  .navbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+}
+  .navbar ul {
+    list-style: none;
+    
+  }
+
+  .navbar li {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+  
+  
+
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+  } 
+
+  .navbar a:hover {
+    color: rgb(23, 187, 160); 
+  }
+  

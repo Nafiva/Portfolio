@@ -1,0 +1,157 @@
+
+.about {
+    font-size: 500px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(149, 149, 156);
+    margin-bottom: 100px ;
+    text-align: center;
+}
+/*
+This adds a typing animation to the about me 
+*/
+@keyframes typing {
+  0% {
+      width: 0;
+  }
+  100% {
+      width: 100%;
+  }
+}
+
+.about h1{
+  overflow: hidden;
+  font-size: 100px;
+  font-weight: 700;
+  white-space: nowrap;
+  animation: typing 5s steps(50, end);
+
+}
+
+
+
+  
+
+
+body {
+    margin:0;
+    padding:0;
+    background-image: url("purple.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  
+
+
+p {
+    font-size: 15px;
+    font-family:"Source Code Pro", sans-serif, monospace;
+    font-weight: bold;
+    color: rgb(106, 106, 130);
+    
+}
+
+.text-container {
+    display: flex;
+    text-align: bottom;
+    flex-direction: column;
+    line-height: 2;
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #d5d4d4;
+    margin-top: -60px;
+
+}
+
+.text-container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+    border-top: 10px solid transparent;
+    border-right: 10px solid #8f8d97;
+    border-bottom: 10px solid transparent;
+  }
+  
+.image-with-text img {
+    margin-right: 50px;
+    margin-left: 20px;
+    max-height: 500px;
+    margin-top: -60px;
+    width: auto;
+    border-radius: 2ch;
+  
+   
+  }
+
+.image-with-text {
+    display: flex;
+    
+}
+  
+.decos {
+    position: absolute;
+    margin-left: 1225px;
+    width: 200px;
+    top: 200px;
+    margin-top: -200; 
+}
+
+  
+  .social-icons {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: auto;
+    padding: 10px 0;
+    z-index: 9999;
+    text-align: right;
+    opacity: 0;
+    transition: opacity 5s;
+}
+
+  
+  
+  .social-icons.show {
+    opacity: 1;
+  }
+
+    .social-icons a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin: 5px;
+        background: rgb(199, 192, 200);
+        border-radius: 50%;
+        line-height: 40px;
+        transition: transform 0.1s;
+        text-align: center; 
+        
+      }
+      .social-icons a:hover {
+        transform: scale(1.2);
+      }
+      
+      
+      body.scroll-up .social-icons.show {
+        opacity: 1;
+      }
+      
+      body.scroll-down .social-icons.show {
+        opacity: 0;
+      }
+
+  
+      .bg-custom {
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        color: #797179;
+        margin-top: 120px;
+        
+        background-color: #d5d4d4; /* Replace with your desired color */
+        
+      }
+      
+
